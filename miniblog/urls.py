@@ -29,3 +29,5 @@ urlpatterns = [
     path('updatepost/<int:id>', views.update_post,name='updatepost'),
     path('deletepost/<int:id>', views.delete_post,name='deletepost'),
 ]
+
+# second push
