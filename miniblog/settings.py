@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-import django_heroku
+# import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,12 +24,12 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'b^5!%j6i_1!nw5)q*v(--y-xi5gwg-9&4mci3ml0c-2k0)kf-&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG=False
+# DEBUG = False
+DEBUG=True
 
 # ALLOWED_HOSTS = ['https://django-blog12.herokuapp.com/','127.0.0.1']
- ALLOWED_HOSTS=[]
-#ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS=[]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,10 +52,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-#    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'miniblog.urls'
 
@@ -134,4 +134,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
- django_heroku.settings(locals())
+# django_heroku.settings(locals())
