@@ -24,10 +24,11 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'b^5!%j6i_1!nw5)q*v(--y-xi5gwg-9&4mci3ml0c-2k0)kf-&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
+DEBUG=True
 
-ALLOWED_HOSTS = ['https://django-blog12.herokuapp.com/','http://127.0.0.1:4440/']
-
+ALLOWED_HOSTS = ['https://django-blog12.herokuapp.com/','127.0.0.1']
+# ALLOWED_HOSTS=[]
 
 # Application definition
 
@@ -123,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 # STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
